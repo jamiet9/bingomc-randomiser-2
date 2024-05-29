@@ -70,6 +70,23 @@
             padding: 10px;
             text-align: center;
         }
+        .dropdown {
+            margin: 10px 0;
+            cursor: pointer;
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .dropdown-content {
+            display: none;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -90,63 +107,103 @@
         <h1>Private Settings</h1>
         <button onclick="randomizePrivateSettings()">Randomize Settings</button>
         <button onclick="showPage('mainPage')" class="reset-btn">Go Back</button>
-        <div id="privateSettings" style="margin-top: 20px;"></div>
-
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="difficultyCheckbox" checked>
-            <label for="difficultyCheckbox">Difficulty: <span id="difficultySetting"></span></label>
+        <div class="dropdown">
+            Difficulty
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="difficultyCheckbox" checked>
+                <label for="difficultyCheckbox">Difficulty: <span id="difficultySetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="gameLengthCheckbox" checked>
-            <label for="gameLengthCheckbox">Game Length: <span id="gameLengthSetting"></span></label>
+        <div class="dropdown">
+            Game Length
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="gameLengthCheckbox" checked>
+                <label for="gameLengthCheckbox">Game Length: <span id="gameLengthSetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="hardItemsCheckbox" checked>
-            <label for="hardItemsCheckbox">Hard Items: <span id="hardItemsSetting"></span></label>
+        <div class="dropdown">
+            Hard Items
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="hardItemsCheckbox" checked>
+                <label for="hardItemsCheckbox">Hard Items: <span id="hardItemsSetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="fullCardCheckbox" checked>
-            <label for="fullCardCheckbox">Full Card: <span id="fullCardSetting"></span></label>
+        <div class="dropdown">
+            Full Card
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="fullCardCheckbox" checked>
+                <label for="fullCardCheckbox">Full Card: <span id="fullCardSetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="lockoutModeCheckbox" checked>
-            <label for="lockoutModeCheckbox">Lockout Mode: <span id="lockoutModeSetting"></span></label>
+        <div class="dropdown">
+            Lockout Mode
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="lockoutModeCheckbox" checked>
+                <label for="lockoutModeCheckbox">Lockout Mode: <span id="lockoutModeSetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="hardcoreCheckbox" checked>
-            <label for="hardcoreCheckbox">Hardcore: <span id="hardcoreSetting"></span></label>
+        <div class="dropdown">
+            Hardcore
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="hardcoreCheckbox" checked>
+                <label for="hardcoreCheckbox">Hardcore: <span id="hardcoreSetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="randomTeleportCheckbox" checked>
-            <label for="randomTeleportCheckbox">Random Teleport: <span id="randomTeleportSetting"></span></label>
+        <div class="dropdown">
+            Random Teleport
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="randomTeleportCheckbox" checked>
+                <label for="randomTeleportCheckbox">Random Teleport: <span id="randomTeleportSetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="pvpEnabledCheckbox" checked>
-            <label for="pvpEnabledCheckbox">PVP Enabled: <span id="pvpEnabledSetting"></span></label>
+        <div class="dropdown">
+            PVP Enabled
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="pvpEnabledCheckbox" checked>
+                <label for="pvpEnabledCheckbox">PVP Enabled: <span id="pvpEnabledSetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="keepInventoryCheckbox" checked>
-            <label for="keepInventoryCheckbox">Keep Inventory: <span id="keepInventorySetting"></span></label>
+        <div class="dropdown">
+            Keep Inventory
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="keepInventoryCheckbox" checked>
+                <label for="keepInventoryCheckbox">Keep Inventory: <span id="keepInventorySetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="daylightCycleCheckbox" checked>
-            <label for="daylightCycleCheckbox">Daylight Cycle: <span id="daylightCycleSetting"></span></label>
+        <div class="dropdown">
+            Daylight Cycle
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="daylightCycleCheckbox" checked>
+                <label for="daylightCycleCheckbox">Daylight Cycle: <span id="daylightCycleSetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="mobSpawningCheckbox" checked>
-            <label for="mobSpawningCheckbox">Mob Spawning: <span id="mobSpawningSetting"></span></label>
+        <div class="dropdown">
+            Mob Spawning
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="mobSpawningCheckbox" checked>
+                <label for="mobSpawningCheckbox">Mob Spawning: <span id="mobSpawningSetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="tickspeedCheckbox" checked>
-            <label for="tickspeedCheckbox">Tickspeed: <span id="tickspeedSetting"></span></label>
+        <div class="dropdown">
+            Tickspeed
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="tickspeedCheckbox" checked>
+                <label for="tickspeedCheckbox">Tickspeed: <span id="tickspeedSetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="effectsCheckbox" checked>
-            <label for="effectsCheckbox">Effects: <span id="effectsSetting"></span></label>
+        <div class="dropdown">
+            Effects
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="effectsCheckbox" checked>
+                <label for="effectsCheckbox">Effects: <span id="effectsSetting"></span></label>
+            </div>
         </div>
-        <div class="setting">
-            <input type="checkbox" class="settings-checkbox" id="bingoCardCheckbox" checked>
-            <label for="bingoCardCheckbox">Generate Random Bingo Card?</label>
+        <div class="dropdown">
+            Bingo Card
+            <div class="dropdown-content">
+                <input type="checkbox" class="settings-checkbox" id="bingoCardCheckbox" checked>
+                <label for="bingoCardCheckbox">Generate Random Bingo Card?</label>
+            </div>
         </div>
         <div id="bingoCardContainer" class="bingo-card hidden"></div>
     </div>
@@ -272,12 +329,11 @@
             "PUMPKIN_PIE", "FIREWORK_ROCKET", "PRISMARINE_SHARD", "PRISMARINE_CRYSTALS", "RABBIT", "COOKED_RABBIT", "RABBIT_STEW", 
             "RABBIT_FOOT", "RABBIT_HIDE", "ARMOR_STAND", "NAME_TAG", "MUTTON", "COOKED_MUTTON", "BEETROOT", "BEETROOT_SEEDS", 
             "BEETROOT_SOUP", "SPLASH_POTION", "SHIELD", "IRON_NUGGET", "TRIDENT", "NAUTILUS_SHELL", "HEART_OF_THE_SEA", 
-            "CROSSBOW", "SUSPICIOUS_STEW", "LOOM", "COMPOSTER", "BARREL", "SMOKER", "BLAST_FURNACE", "CARTOGRAPHY_TABLE", 
-            "FLETCHING_TABLE", "GRINDSTONE", "SMITHING_TABLE", "STONECUTTER", "BELL", "LANTERN", "SWEET_BERRIES", "GLOW_BERRIES", 
-            "CAMPFIRE", "HONEYCOMB", "BEEHIVE", "HONEY_BOTTLE", "HONEYCOMB_BLOCK", "CRYING_OBSIDIAN", "CANDLE", "WHITE_CANDLE", 
-            "ORANGE_CANDLE", "MAGENTA_CANDLE", "LIGHT_BLUE_CANDLE", "YELLOW_CANDLE", "LIME_CANDLE", "PINK_CANDLE", "GRAY_CANDLE", 
-            "LIGHT_GRAY_CANDLE", "CYAN_CANDLE", "PURPLE_CANDLE", "BLUE_CANDLE", "BROWN_CANDLE", "GREEN_CANDLE", "RED_CANDLE", 
-            "BLACK_CANDLE", "POINTED_DRIPSTONE", "BRUSH", "COPPER_GRATE", "EXPOSED_COPPER_GRATE", "WEATHERED_COPPER_GRATE", 
+            "CROSSBOW", "SUSPICIOUS_STEW", "LOOM", "COMPOSTER", "BARREL", "SMOKER", "BLAST_FURNACE", "CARTOGRAPHY_TABLE", "FLETCHING_TABLE", "GRINDSTONE", "SMITHING_TABLE", "STONECUTTER", "BELL", "LANTERN", "SWEET_BERRIES", 
+            "GLOW_BERRIES", "CAMPFIRE", "HONEYCOMB", "BEEHIVE", "HONEY_BOTTLE", "HONEYCOMB_BLOCK", "CRYING_OBSIDIAN", "CANDLE", 
+            "WHITE_CANDLE", "ORANGE_CANDLE", "MAGENTA_CANDLE", "LIGHT_BLUE_CANDLE", "YELLOW_CANDLE", "LIME_CANDLE", "PINK_CANDLE", 
+            "GRAY_CANDLE", "LIGHT_GRAY_CANDLE", "CYAN_CANDLE", "PURPLE_CANDLE", "BLUE_CANDLE", "BROWN_CANDLE", "GREEN_CANDLE", 
+            "RED_CANDLE", "BLACK_CANDLE", "POINTED_DRIPSTONE", "BRUSH", "COPPER_GRATE", "EXPOSED_COPPER_GRATE", "WEATHERED_COPPER_GRATE", 
             "OXIDIZED_COPPER_GRATE", "WAXED_COPPER_GRATE", "WAXED_EXPOSED_COPPER_GRATE", "WAXED_WEATHERED_COPPER_GRATE", 
             "WAXED_OXIDIZED_COPPER_GRATE", "WHITE_TERRACOTTA", "ORANGE_TERRACOTTA", "MAGENTA_TERRACOTTA", "LIGHT_BLUE_TERRACOTTA", 
             "YELLOW_TERRACOTTA", "LIME_TERRACOTTA", "PINK_TERRACOTTA", "GRAY_TERRACOTTA", "LIGHT_GRAY_TERRACOTTA", "CYAN_TERRACOTTA", 
@@ -441,3 +497,4 @@
     </script>
 </body>
 </html>
+
